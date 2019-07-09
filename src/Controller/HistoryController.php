@@ -18,6 +18,7 @@ use Symfony\Component\Validator\Constraints\Json;
 
 class HistoryController extends ApiController
 {
+    //Entity manager
     private $em;
     private $historyRepository;
     private $historyService;
@@ -35,6 +36,7 @@ class HistoryController extends ApiController
     }
 
     /**
+     * Save an url in the database
      * @Route("/save_url")
      * @param Request $request
      * @return Response
@@ -44,15 +46,12 @@ class HistoryController extends ApiController
     }
 
     /**
+     * List all the history entries
      * @Route("/list_url")
      * @return Response
      */
     public function listUrl() {
         return $this->historyService->listUrl();
-    }
-
-    public function bookmarkVideo() {
-
     }
 
 }

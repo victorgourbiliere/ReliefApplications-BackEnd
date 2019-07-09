@@ -26,7 +26,7 @@ class HistoryService
     }
 
     /**
-     * Save a new entry Url in the data base
+     * Save a new entry Url in the database
      * @param Request $request
      * @return Response
      */
@@ -40,7 +40,7 @@ class HistoryService
 
 
     /**
-     * Obtain a list of the Urls saved in the data base
+     * Fetch the list of the Urls saved in the database
      * @return Response
      */
     public function listUrl() {

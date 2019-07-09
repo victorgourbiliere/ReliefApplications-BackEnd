@@ -1,31 +1,22 @@
 nelmio_cors:
     defaults:
-#        !!! Old version !!!
-        origin_regex: true
-        allow_origin: ['*']
-        allow_methods: ['GET', 'OPTIONS', 'POST', 'PUT', 'PATCH', 'DELETE']
-        allow_headers: ['*']
-        expose_headers: ['Link']
-        max_age: 3600
+        allow_credentials: false
+        allow_origin: []
+        allow_headers: []
+        allow_methods: []
+        expose_headers: []
+        max_age: 0
+        hosts: []
+        origin_regex: false
+        forced_allow_origin_value: ~
     paths:
-        '^/': ~
-
-
-
-#!!! New Version From DOC !!!
-#    allow_credentials: false
-#        allow_origin: []
-#        allow_headers: []
-#        allow_methods: []
-#        expose_headers: []
-#        max_age: 0
-#        hosts: []
-#        origin_regex: false
-#        forced_allow_origin_value: ~
-#
-#    paths:
-#        '^/':
-#            allow_origin: ['*']
-#            allow_headers: ['*']
-#            allow_methods: ['POST', 'PUT', 'GET', 'DELETE']
-#            max_age: 3600
+        '^/save_url/':
+            allow_origin: ['*']
+            allow_headers: ['*']
+            allow_methods: ['POST']
+            max_age: 3600
+        '^/list_url/':
+            allow_origin: ['*']
+            allow_headers: ['*']
+            allow_methods: ['GET']
+            max_age: 3600
